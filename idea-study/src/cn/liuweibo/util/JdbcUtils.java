@@ -2,6 +2,7 @@ package cn.liuweibo.util;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.util.Properties;
 
@@ -17,7 +18,11 @@ public class JdbcUtils {
     static {
         Properties prop = new Properties();
         try {
-            prop.load(new FileReader("F:\\java-idea\\idea-study\\src\\jdbc.properties"));
+            // 获取src路径下文件的方式
+            ClassLoader classLoader = JdbcUtils.class.getClassLoader();
+            URL resource = classLoader.getResource("jdbc.properties");
+            String path = resource.getPath();
+            prop.load(new FileReader(path));
             driver = prop.getProperty("driver");
             url = prop.getProperty("url");
             user = prop.getProperty("user");
