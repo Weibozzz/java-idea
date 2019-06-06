@@ -11,3 +11,5 @@
 ### DruidDemo 阿里连接池演示
 ## idea-servlet
 ### cn.liuweibo.servletDemo servlet快速入门
+### RequestDemo 获取请求参数demo
+新建 new 一个servlet文件会自动生成
