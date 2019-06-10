@@ -14,3 +14,4 @@
 ### RequestDemo 获取请求参数demo
 新建 new 一个servlet文件会自动生成
 ### userDao 登录实例
+### ResponseDemo response 输出到页面例子
